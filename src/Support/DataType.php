@@ -241,13 +241,6 @@ class DataType implements Countable
 
         $class = (new DataCollectionAnnotationReader())->getClass($reflection);
 
-        if ($class === null) {
-            throw CannotFindDataClass::wrongDataCollectionAnnotation(
-                $reflection->class,
-                $reflection->name
-            );
-        }
-
         return $class;
     }
 
